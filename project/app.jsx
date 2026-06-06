@@ -7,9 +7,9 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 }/*EDITMODE-END*/;
 
 const DIRECTIONS = [
-  { id: "campo",  es: "Campo",  en: "Field" },
-  { id: "diesel", es: "Diésel", en: "Diesel" },
-  { id: "huerta", es: "Huerta", en: "Grove" },
+  { id: "campo",  es: "Campo",  no: "Jord",    en: "Field" },
+  { id: "diesel", es: "Diésel", no: "Diésel",  en: "Diesel" },
+  { id: "huerta", es: "Huerta", no: "Hage",    en: "Grove" },
 ];
 
 function App() {
@@ -27,10 +27,10 @@ function App() {
     else document.documentElement.style.removeProperty('--accent');
   }, [t.accent]);
   useE3(() => {
-    document.documentElement.lang = lang;
+    document.documentElement.lang = lang === 'no' ? 'nb' : lang;
   }, [lang]);
 
-  const dirLabel = (d) => lang === 'es' ? d.es : d.en;
+  const dirLabel = (d) => lang === 'no' ? d.no : lang === 'es' ? d.es : d.en;
 
   return (
     <>
@@ -51,24 +51,24 @@ function App() {
       <Footer T={T} />
 
       <TweaksPanel title="Tweaks">
-        <TweakSection label={lang === 'es' ? 'Dirección de diseño' : 'Design direction'} />
+        <TweakSection label={lang === 'es' ? 'Dirección de diseño' : lang === 'no' ? 'Designretning' : 'Design direction'} />
         <TweakRadio
-          label={lang === 'es' ? 'Estilo' : 'Style'}
+          label={lang === 'es' ? 'Estilo' : lang === 'no' ? 'Stil' : 'Style'}
           value={t.direction}
           options={DIRECTIONS.map(d => ({ value: d.id, label: dirLabel(d) }))}
           onChange={(v) => setTweak('direction', v)}
         />
         <TweakColor
-          label={lang === 'es' ? 'Acento' : 'Accent'}
+          label={lang === 'es' ? 'Acento' : lang === 'no' ? 'Aksent' : 'Accent'}
           value={t.accent}
           options={["#DF9E2B", "#E8541E", "#C39A2B", "#B0421E", "#8FB63A"]}
           onChange={(v) => setTweak('accent', v)}
         />
-        <TweakSection label={lang === 'es' ? 'Idioma' : 'Language'} />
+        <TweakSection label={lang === 'es' ? 'Idioma' : lang === 'no' ? 'Språk' : 'Language'} />
         <TweakRadio
-          label={lang === 'es' ? 'Idioma del sitio' : 'Site language'}
+          label={lang === 'es' ? 'Idioma del sitio' : lang === 'no' ? 'Nettstedsspråk' : 'Site language'}
           value={lang}
-          options={[{ value: "es", label: "Español" }, { value: "en", label: "English" }]}
+          options={[{ value: "es", label: "Español" }, { value: "no", label: "Norsk" }, { value: "en", label: "English" }]}
           onChange={(v) => setLang(v)}
         />
       </TweaksPanel>

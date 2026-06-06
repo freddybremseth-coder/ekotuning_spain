@@ -84,6 +84,7 @@ function Header({ T, lang, setLang }) {
         <div className="header-actions">
           <div className="lang-toggle" role="group" aria-label="Language">
             <button className={lang === 'es' ? 'on' : ''} onClick={() => setLang('es')}>ES</button>
+            <button className={lang === 'no' ? 'on' : ''} onClick={() => setLang('no')}>NO</button>
             <button className={lang === 'en' ? 'on' : ''} onClick={() => setLang('en')}>EN</button>
           </div>
           <a href="#contact" className="btn btn-primary">

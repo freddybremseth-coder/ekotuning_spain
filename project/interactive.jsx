@@ -17,7 +17,7 @@ function Calculator({ T, lang }) {
   const m = models.find(x => x.name === model);
 
   const pct = (a, b) => Math.round(((b - a) / a) * 100);
-  const nf = (n) => n.toLocaleString(lang === 'es' ? 'es-ES' : 'en-GB');
+  const nf = (n) => n.toLocaleString(lang === 'es' ? 'es-ES' : lang === 'no' ? 'nb-NO' : 'en-GB');
 
   return (
     <section className="section-pad" id="calc" ref={ref}>
