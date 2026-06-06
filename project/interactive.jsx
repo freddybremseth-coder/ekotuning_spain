@@ -353,9 +353,14 @@ function Team({ T }) {
                 <h3>{p.name}</h3>
                 <div className="team-role">{p.role}</div>
                 <p>{p.bio}</p>
-                <a className="team-link" href={p.href} target="_blank" rel="noreferrer">
-                  {p.tagLabel === 'Instagram' ? Ico.ig({}) : Ico.mail({})}{p.tag}
-                </a>
+                <div className="team-links">
+                  <a className="team-link" href={p.href} target="_blank" rel="noreferrer">
+                    {p.tagLabel === 'Instagram' ? Ico.ig({}) : p.tagLabel === 'Web' ? Ico.web({}) : Ico.mail({})}{p.tag}
+                  </a>
+                  {p.href2 && <a className="team-link" href={p.href2} target="_blank" rel="noreferrer">
+                    {Ico.mail({})}{p.tag2}
+                  </a>}
+                </div>
               </div>
             </div>
           ))}

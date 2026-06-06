@@ -403,6 +403,7 @@
 .team-body h3 { font-size: 23px; }
 .team-role { font-size: 13px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: .05em; margin: 7px 0 13px; }
 .team-body p { margin: 0 0 18px; color: var(--ink-2); font-size: 15.5px; }
+.team-links { display: flex; flex-direction: column; gap: 9px; }
 .team-link { display: inline-flex; align-items: center; gap: 9px; font-weight: 700; font-size: 15px; color: var(--ink); }
 .team-link:hover { color: var(--primary); }
 .team-link svg { width: 18px; height: 18px; color: var(--primary); flex: 0 0 auto; }
