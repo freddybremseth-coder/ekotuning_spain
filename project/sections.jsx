@@ -76,6 +76,7 @@ function Header({ T, lang, setLang }) {
         <nav className="nav-links">
           <a href="#how">{N.how}</a>
           <a href="#benefits">{N.benefits}</a>
+          <a href="#technology">{N.tech}</a>
           <a href="#calc">{N.calc}</a>
           <a href="#about">{N.about}</a>
           <a href="#faq">{N.faq}</a>
@@ -291,4 +292,71 @@ function Benefits({ T }) {
   );
 }
 
-Object.assign(window, { Ico, useReveal, useCountUp, Header, Hero, DynoChart, StatsBar, Process, Benefits });
+/* =========================================================
+   DEEP DIVE — Technology explanation
+   ========================================================= */
+function DeepDive({ T }) {
+  const ref = useReveal();
+  const D = T.deepdive;
+  const machineIcos = [Ico.tractor, Ico.fuel, Ico.gauge, Ico.bolt];
+  return (
+    <section className="section-pad alt-bg" id="technology" ref={ref}>
+      <div className="wrap">
+        <div className="reveal">
+          <span className="eyebrow">{D.eyebrow}</span>
+          <h2 className="section-head" style={{ maxWidth: '760px', margin: '16px 0 14px' }}>{D.title}</h2>
+          <p className="dd-lead">{D.lead}</p>
+        </div>
+
+        <div style={{ marginTop: 48 }}>
+          <div className="dd-concept reveal">
+            <div className="dd-box factory">
+              <div className="dd-box-icon">{Ico.cpu({})}</div>
+              <h3>{D.box1.title}</h3>
+              <p>{D.box1.body}</p>
+              <ul>{D.box1.items.map((item, i) => <li key={i}>{item}</li>)}</ul>
+            </div>
+            <div className="dd-arrow">{Ico.arrowR({})}</div>
+            <div className="dd-box tuned">
+              <div className="dd-box-icon">{Ico.bolt({})}</div>
+              <h3>{D.box2.title}</h3>
+              <p>{D.box2.body}</p>
+              <ul>{D.box2.items.map((item, i) => <li key={i}>{item}</li>)}</ul>
+            </div>
+          </div>
+
+          <div className="dd-tech-row reveal">
+            <div className="dd-tech-text">
+              <h3>{D.tech.title}</h3>
+              <p>{D.tech.p1}</p>
+              <p>{D.tech.p2}</p>
+            </div>
+            <div className="dd-tech-facts">
+              {D.tech.facts.map((f, i) => (
+                <div className="dd-fact" key={i}>
+                  <div className="dd-fact-n">{f.n}</div>
+                  <div className="dd-fact-l">{f.l}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="dd-machines reveal">
+            <div className="dd-machines-title">{D.machines.title}</div>
+            <div className="dd-machines-grid">
+              {D.machines.types.map((type, i) => (
+                <div className="dd-machine" key={i}>
+                  <div className="dd-machine-ico">{machineIcos[i]({})}</div>
+                  <div className="dd-machine-name">{type.name}</div>
+                  <div className="dd-machine-brands">{type.brands}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { Ico, useReveal, useCountUp, Header, Hero, DynoChart, StatsBar, Process, Benefits, DeepDive });

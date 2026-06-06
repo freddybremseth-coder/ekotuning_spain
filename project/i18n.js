@@ -8,6 +8,7 @@ window.I18N = {
     nav: {
       how: "Cómo funciona",
       benefits: "Ventajas",
+      tech: "Tecnología",
       calc: "Calculadora",
       about: "Sobre nosotros",
       faq: "Preguntas",
@@ -117,6 +118,53 @@ window.I18N = {
           tagLabel: "Instagram", tag: "@gallarlopez88", href: "https://www.instagram.com/gallarlopez88/" },
       ],
     },
+    deepdive: {
+      eyebrow: "La tecnología",
+      title: "Tu motor ya tiene la potencia. Solo hace falta liberarla.",
+      lead: "Cada motor diésel moderno sale de fábrica con márgenes de seguridad amplios y un software conservador. No porque el motor no pueda dar más — sino porque el fabricante necesita un mismo motor para climas extremos, combustibles variables y distintos mercados. Ekotuning libera ese potencial latente, de forma segura y medida en banco de potencia.",
+      box1: {
+        title: "Motor de fábrica: por qué está limitado",
+        body: "Un solo bloque de motor se vende en decenas de países con distintas calidades de combustible, normativas de emisiones y condiciones climáticas. El software de fábrica es un compromiso: funciona en todos lados, pero no es óptimo para ninguno.",
+        items: [
+          "Mapas de inyección conservadores por defecto",
+          "Presión de turbo por debajo del límite de diseño real",
+          "Par máximo retrasado para proteger la mecánica en condiciones adversas",
+          "El mismo software para 4 o más variantes de mercado distintas",
+        ],
+      },
+      box2: {
+        title: "Con Ekotuning: cada motor trabaja como debe",
+        body: "Reprogramamos la centralita con un archivo construido específicamente para tu tractor, tu motor y tu forma de trabajar. El resultado se verifica en banco de potencia dinámico antes y después.",
+        items: [
+          "Inyección optimizada para el combustible de tu zona",
+          "Par máximo disponible desde bajas vueltas — justo donde lo necesitas",
+          "Turbo calibrado dentro de sus límites de diseño del fabricante",
+          "Software específico para tu número de serie y tu modelo exacto",
+        ],
+      },
+      tech: {
+        title: "Sin cajas, sin hardware: todo está en el software",
+        p1: "La optimización se realiza por la toma de diagnóstico OBD2 o el bus de servicio del fabricante — el mismo conector que usa tu taller oficial. No se abre el motor, no se instala ningún componente físico. El proceso completo se hace a pie de tu explotación, sin mover el tractor al taller.",
+        p2: "Antes de instalar el archivo optimizado medimos el estado real del motor en banco de potencia móvil. Después de la reprogramación, volvemos a medir. Te entregamos el informe completo: potencia, par y consumo estimado antes y después, en cifras reales — no promesas.",
+        facts: [
+          { n: "+25%", l: "Potencia de media" },
+          { n: "+30%", l: "Par máximo" },
+          { n: "−12%", l: "Consumo de diésel" },
+          { n: "<1h", l: "Proceso completo" },
+          { n: "100%", l: "Reversible" },
+          { n: "Stage V", l: "Homologado" },
+        ],
+      },
+      machines: {
+        title: "¿Qué máquinas optimizamos?",
+        types: [
+          { name: "Tractores", brands: "John Deere · Fendt · New Holland · Case IH · Massey Ferguson · Deutz-Fahr · Claas · Valtra · Kubota" },
+          { name: "Pulverizadores autopropulsados", brands: "John Deere · Amazone · Agrifac · Hardi · Berthoud y otros" },
+          { name: "Cosechadoras", brands: "John Deere · New Holland · Claas · Case IH · Deutz-Fahr · Massey Ferguson" },
+          { name: "Finsnittere y autocargadores", brands: "Krone · Claas · New Holland · PÖTTINGER y otros" },
+        ],
+      },
+    },
     faq: {
       eyebrow: "Preguntas frecuentes",
       title: "Lo que todo agricultor pregunta",
@@ -167,6 +215,7 @@ window.I18N = {
     nav: {
       how: "How it works",
       benefits: "Benefits",
+      tech: "Technology",
       calc: "Calculator",
       about: "About us",
       faq: "FAQ",
@@ -275,6 +324,53 @@ window.I18N = {
           bio: "A farmer with his own business in the area. Every day among the olive trees: pruning, clearing, levelling and tillage. He lives off the tractor, so he knows what the land needs — and what you need.",
           tagLabel: "Instagram", tag: "@gallarlopez88", href: "https://www.instagram.com/gallarlopez88/" },
       ],
+    },
+    deepdive: {
+      eyebrow: "The technology",
+      title: "Your engine already has the power. It just needs unlocking.",
+      lead: "Every modern diesel engine leaves the factory with wide safety margins and conservative software. Not because the engine can't do more — but because the manufacturer needs one engine to work in extreme climates, variable fuel qualities and different markets. Ekotuning releases that latent potential, safely and measurably on a dyno.",
+      box1: {
+        title: "Factory engine: why it's held back",
+        body: "A single engine block is sold across dozens of countries with different fuel quality, emissions regulations and climate conditions. The factory software is a compromise: it works everywhere, but it's optimal for nowhere.",
+        items: [
+          "Conservative injection maps by default",
+          "Turbo pressure below the real mechanical design limit",
+          "Peak torque delayed to protect the drivetrain in adverse conditions",
+          "The same software for 4 or more different market variants",
+        ],
+      },
+      box2: {
+        title: "With Ekotuning: every engine works as it should",
+        body: "We reprogram the ECU with a file built specifically for your tractor, your engine and the way you work. The result is verified on a mobile dyno before and after.",
+        items: [
+          "Injection optimised for the fuel quality in your region",
+          "Peak torque available from low revs — exactly where you need it",
+          "Turbo calibrated within the manufacturer's own design limits",
+          "Software specific to your serial number and exact model",
+        ],
+      },
+      tech: {
+        title: "No boxes, no hardware: it's all in the software",
+        p1: "The optimisation is done through the OBD2 diagnostic port or the manufacturer's service bus — the same connector your authorised dealer uses. The engine is not opened; nothing physical is installed. The entire process is done at your farm, without moving the tractor to any workshop.",
+        p2: "Before installing the optimised file we measure the engine's real state on a mobile dyno. After reprogramming, we measure again. You get the full report: power, torque and estimated fuel use before and after, in real figures — not promises.",
+        facts: [
+          { n: "+25%", l: "Power on average" },
+          { n: "+30%", l: "Peak torque" },
+          { n: "−12%", l: "Diesel consumption" },
+          { n: "<1h", l: "Full process" },
+          { n: "100%", l: "Reversible" },
+          { n: "Stage V", l: "Compliant" },
+        ],
+      },
+      machines: {
+        title: "What machines do we tune?",
+        types: [
+          { name: "Tractors", brands: "John Deere · Fendt · New Holland · Case IH · Massey Ferguson · Deutz-Fahr · Claas · Valtra · Kubota" },
+          { name: "Self-propelled sprayers", brands: "John Deere · Amazone · Agrifac · Hardi · Berthoud and others" },
+          { name: "Combines", brands: "John Deere · New Holland · Claas · Case IH · Deutz-Fahr · Massey Ferguson" },
+          { name: "Forage harvesters & trailers", brands: "Krone · Claas · New Holland · PÖTTINGER and others" },
+        ],
+      },
     },
     faq: {
       eyebrow: "FAQ",

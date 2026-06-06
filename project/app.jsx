@@ -40,6 +40,7 @@ function App() {
         <StatsBar T={T} />
         <Process T={T} />
         <Benefits T={T} />
+        <DeepDive T={T} />
         <SloganBand T={T} />
         <Calculator T={T} lang={lang} />
         <About T={T} />
